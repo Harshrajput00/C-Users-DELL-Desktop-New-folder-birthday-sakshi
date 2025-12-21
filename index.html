@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Happy Birthday — For Sakshi</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="diary-container">
+    <!-- Cover Page -->
+    <div class="diary-page cover-page active" id="cover-page">
+      <div class="page-inner cover-inner">
+        <div class="cover-decoration top-left">🌸</div>
+        <div class="cover-decoration top-right">💕</div>
+        <div class="cover-decoration bottom-left">💫</div>
+        <div class="cover-decoration bottom-right">🌿</div>
+        
+        <div class="cover-content">
+          <div class="cover-icon">📖</div>
+          <h1 class="cover-title">Our Love Story</h1>
+          <p class="cover-subtitle">A Year of Beautiful Moments</p>
+          
+          <div class="cover-heart">💕</div>
+          
+          <div class="cover-names">
+            <p>Happy Birthday</p>
+            <h2>Sakshi</h2>
+          </div>
+          
+          <p class="cover-date">December 29, 2025</p>
+          
+          <div class="cover-divider"></div>
+          <p class="cover-message">~Open to Discover Our Memories~</p>
+        </div>
+        
+        <div class="cover-nav-button">
+          <button id="nextPageCover" class="page-btn next-btn">Next Page →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Memory Pages -->
+    <div id="memory-pages-container"></div>
+
+    <!-- Navigation for Memory Pages -->
+    <div class="diary-nav" id="memory-nav" style="display:none;">
+      <button id="prevPage" class="page-btn">← Previous Page</button>
+      <span id="page-counter">Cover</span>
+      <button id="nextPage" class="page-btn">Next Page →</button>
+    </div>
+  </div>
+
+  <audio id="bg-music" loop>
+    <!-- Add a personal MP3 at assets/music.mp3 or replace the src below -->
+    <source src="assets/music.mp3" type="audio/mpeg">
+  </audio>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <button class="close" id="closeModal">✕</button>
+      <h2>Love Notes</h2>
+      <div id="notes"></div>
+      <div class="modal-controls">
+        <button id="prevNote">Prev</button>
+        <button id="nextNote">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Memories slideshow modal -->
+  <div id="slideshow-modal" class="modal hidden" aria-hidden="true">
+    <div class="modal-content slideshow">
+      <button class="close" id="closeSlideshow">✕</button>
+      <div class="slide-area">
+        <button id="prevSlide" class="slide-nav">‹</button>
+        <div id="slideInner" class="slide-inner">
+          <!-- slides injected here -->
+        </div>
+        <button id="nextSlide" class="slide-nav">›</button>
+      </div>
+      <div class="slide-controls">
+        <button id="playSlides">Play</button>
+        <button id="pauseSlides">Pause</button>
+        <button id="slideCelebrate">Celebrate This Memory</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
